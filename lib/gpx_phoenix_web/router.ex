@@ -18,6 +18,9 @@ defmodule GpxPhoenixWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "tracks", TracksController, :index
+    get "tracks/:id", TracksController, :show
+    get "tracks/:id/geojson", TracksController, :geojson
   end
 
   # Other scopes may use custom stacks.
